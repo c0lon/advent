@@ -33,6 +33,9 @@ def nice_strings(filepath):
 
     return nice
 
+def nice_strings_2(filepath):
+    data = open(filepath).read()
+
 if __name__ == '__main__':
     filepaths = ['day_5_input.txt']
     if len(sys.argv) > 1:
