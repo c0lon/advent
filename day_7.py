@@ -79,9 +79,9 @@ def resolve_circuit(circuit):
                 op, operand = value
                 operand = resolve(circuit, operand)
 
-                if isinstance(operand, int):
+                try:
                     _circuit[wire] = ~operand
-                else:
+                except TypeError:
                     _circuit[wire] = ('not', operand)
 
             elif len(value) == 3:
